@@ -1,0 +1,70 @@
+// 공통 변수 (색상, 폰트, z-index 등)
+@mixin ds-theme-common {
+  --ds-font-family-1: "Pretendard", "Noto Sans", sans-serif;
+  --ds-font-family-2: "Malgun Gothic", "Nanum Gothic", "Noto Sans KR",
+    "Pretendard", sans-serif;
+}
+
+// 테마 상관없이 자주 쓰는 컬러셋
+@mixin ds-theme-colors {
+  // ETC
+  --ds-color-scheme: normal;
+  --ds-overlay-background: black;
+  --ds-transition-duration-default: 0.5s;
+  --ds-transition-duration-fast: 0.2s;
+  --ds-transition-duration-slow: 1s;
+
+  // gray, black, 단계 별로 작성할지
+
+  // Main Colors
+  --ds-general-color-transparent: transparent;
+  --ds-general-color-white: #ffffff;
+  --ds-general-color-bg-1: #f9fafc;
+  --ds-general-color-bg-2: #f6f6f6;
+
+  // primary
+  --ds-primary-color-1: #0b088b;
+  --ds-primary-color-2: #fdf1ea;
+
+  // secondary
+  --ds-secondary-color-1: #325070;
+  --ds-secondary-color-2: #deeeff;
+  --ds-secondary-color-3: #f3f7fd;
+
+  --ds-color-black: #000000;
+  --ds-color-black-2: #222222;
+
+  --ds-color-icons: #3a506b;
+  --ds-color-grey: #9fa7b8;
+  --ds-color-lines: #e0e4ec;
+  --ds-color-light: #f7f9fe;
+  // --ds-color-hover: #ba5d26;
+  // --ds-color-pressed: #954a1e;
+  --ds-color-grey-header: #90959b;
+
+  // Status Colors
+  --ds-status-color-success-bg: #ebfbf6;
+  --ds-status-color-success-border: #ebfbf6;
+  --ds-status-color-success-text-color: #039855;
+
+  --ds-status-color-failure-bg: #fdedee;
+  --ds-status-color-failure-border: #f4d0d3;
+  --ds-status-color-failure-text-color: #d92d20;
+
+  --ds-status-color-warning-bg: #fff9e9;
+  --ds-status-color-warning-border: #ebe3cf;
+  --ds-status-color-warning-text-color: #ffab00;
+
+  // Shadow
+}
+
+@mixin ds-default-variables {
+  // scroll
+  --ds-webkit-scrollbar-width: 7px;
+  --ds-webkit-scrollbar-height: 7px;
+  --ds-webkit-scrollbar-thumb-radius: 8px;
+  --ds-webkit-scrollbar-track-bg: var(--ds-general-color-transparent);
+  // gray 단계별로 작성
+}
+
+// color 정의만 여기서, 테마별 _dark.scss, _default.scss 에서 오버라이드

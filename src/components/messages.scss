@@ -1,0 +1,100 @@
+:root {
+  --ds-message-title-text-color: var(--ds-color-black-2);
+  --ds-message-title-date-text-color: #3a5182;
+  --ds-message-title-separate-line-color: #c9d1e1d1;
+
+  --ds-message-assistant-bg: var(--ds-general-color-white);
+  --ds-message-assistant-border-color: #c2ceea;
+  --ds-message-assistant-text-color: var(--ds-color-black-2);
+}
+[theme="dark"] {
+  --ds-message-title-text-color: var(--ds-general-color-white);
+  --ds-message-title-date-text-color: var(--ds-general-color-white);
+  --ds-message-title-separate-line-color: #ccdaf536;
+
+  --ds-message-assistant-bg: #272e37;
+  --ds-message-assistant-border-color: #393939;
+  --ds-message-assistant-text-color: var(--ds-general-color-white);
+}
+.message {
+  display: flex;
+  gap: 1.5em;
+  margin-bottom: 2em;
+  // assistant, user
+
+  &__content {
+    padding: 20px;
+    font-weight: 500;
+    // 컨텐츠 별로 커져야하는 지 확인하기
+    /* 15px */
+    font-size: calc(var(--ds-font-size-base) * 0.9375);
+    max-width: 76%;
+  }
+
+  // 메시지 타이틀
+  &-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    margin-bottom: 2.5em;
+
+    // 타이틀 양측 구분선
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      border-top: 1px solid var(--ds-message-title-separate-line-color);
+      width: 35%;
+      position: absolute;
+      bottom: 8px;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &-text {
+      margin: 0;
+      color: var(--ds-message-title-text-color);
+      /* 18px */
+      font-size: calc(var(--ds-font-size-base) * 1.125);
+    }
+
+    &-date {
+      color: var(--ds-message-title-date-text-color);
+      font-weight: 300;
+      /* 15px */
+      font-size: calc(var(--ds-font-size-base) * 0.9375);
+    }
+  }
+
+  &.message--assistant {
+    .message__content {
+      background-color: var(--ds-message-assistant-bg);
+      border: 1px solid var(--ds-message-assistant-border-color);
+      color: var(--ds-message-assistant-text-color);
+      border-radius: 0px 19px 19px 19px;
+    }
+  }
+
+  &.message--user {
+    justify-content: end;
+    .message__content {
+      background-color: #429ff3;
+      border: 1px solid #429ff3;
+      color: var(--ds-general-color-white);
+      border-radius: 19px 0 19px 19px;
+    }
+  }
+
+  // 오류신고버튼
+  &__error_button {
+    align-self: end;
+  }
+}

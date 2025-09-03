@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex-GPT</title>
+  </head>
+  <body>
+    <div id="root" style="height: 100%;"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+
+<!-- vite-pub/
+├─ index.html
+├─ package.json
+├─ vite.config.js
+├─ src/
+│   ├─ main.js                # 엔트리 스크립트 (퍼블리싱용)
+│   ├─ style.scss             # 전체 import용 SCSS (메인 엔트리)
+│   │
+│   ├─ assets/                # 정적 자원
+│   │   ├─ images/            # 이미지 (png, jpg 등)
+│   │   ├─ icons/             # 아이콘 (svg, ico 등)
+│   │   └─ fonts/             # 웹폰트
+│   │
+│   ├─ components/            # 컴포넌트별 스타일/퍼블리싱 단위
+│   │   ├─ button.scss
+│   │   ├─ table.scss
+│   │   └─ modal.scss
+│   │
+│   ├─ styles/                # SCSS 관련 구조화
+│   │   ├─ _variables.scss    # 공통 변수 (색상, 폰트, z-index 등)
+│   │   ├─ _mixins.scss       # 믹스인 (반복되는 패턴)
+│   │   ├─ _functions.scss    # SCSS 함수
+│   │   ├─ _reset.scss        # 리셋 CSS
+│   │   ├─ _typography.scss   # 폰트/텍스트 스타일
+│   │   ├─ _layout.scss       # 그리드, 레이아웃 구조
+│   │   └─ _utilities.scss    # 유틸리티 클래스
+│   │
+│   └─ themes/                # 테마별 SCSS
+│       ├─ _default.scss      # 기본 테마 (라이트)
+│       └─ _dark.scss         # 다크 테마
+
+
+src/
+├── assets/                     # 이미지, 폰트 등 정적 파일
+│   └── icons/
+├── styles/                     # 전역 스타일 및 테마
+│   ├── base/                   # reset, typography 등
+│   ├── theme/                  # 테마 관련 SCSS
+│   │   ├── _variables.scss     # 색상, 폰트, 간격 등 공통 변수
+│   │   ├── _light.scss         # 라이트 테마
+│   │   ├── _dark.scss          # 다크 테마
+│   │   └── _mixins.scss        # 반복 스타일 함수
+│   └── components/             # 컴포넌트별 스타일 (_button.scss 등)
+├── components/
+│   ├── common/                 # 범용 UI 컴포넌트
+│   │   └── Button/
+│   │       ├── Button.jsx
+│   │       └── Button.scss
+│   ├── layout/                 # Header, Footer 등 전체 구조 요소
+│   └── home/                   # 홈 페이지 전용 컴포넌트
+│       └── IntroDesc/
+│           ├── IntroDesc.jsx
+│           └── IntroDesc.scss
+├── hooks/
+│   └── useTheme.js             # 테마 토글용 커스텀 훅
+├── utils/
+│   └── theme.js                # 테마 설정 객체
+├── layouts/
+│   └── MainLayout.jsx         # 전체 페이지 레이아웃
+├── pages/
+│   └── Home.jsx               # 홈 페이지
+└── index.js                   # 앱 진입점
+
+-->

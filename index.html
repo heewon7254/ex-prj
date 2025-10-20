@@ -3,77 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ex-GPT</title>
-    <script type="module" crossorigin src="/ex-prj/assets/index-CT7fUSqN.js"></script>
-    <link rel="stylesheet" crossorigin href="/ex-prj/assets/index-Bl0OhX4t.css">
+    <title>한국도로공사 GPT</title>
+    <link rel="icon" type="image/png" href="/ex-prj/assets/exGptFavicon-mwIsSHaf.png" />
+    <script type="module" crossorigin src="/ex-prj/assets/index-By18nySK.js"></script>
+    <link rel="stylesheet" crossorigin href="/ex-prj/assets/index-Dp9qpPHV.css">
   </head>
   <body>
-    <div id="root" style="height: 100%;"></div>
+    <div id="root" style="height: 100%"></div>
   </body>
 </html>
 
-
-<!-- vite-pub/
-├─ index.html
-├─ package.json
-├─ vite.config.js
-├─ src/
-│   ├─ main.js                # 엔트리 스크립트 (퍼블리싱용)
-│   ├─ style.scss             # 전체 import용 SCSS (메인 엔트리)
-│   │
-│   ├─ assets/                # 정적 자원
-│   │   ├─ images/            # 이미지 (png, jpg 등)
-│   │   ├─ icons/             # 아이콘 (svg, ico 등)
-│   │   └─ fonts/             # 웹폰트
-│   │
-│   ├─ components/            # 컴포넌트별 스타일/퍼블리싱 단위
-│   │   ├─ button.scss
-│   │   ├─ table.scss
-│   │   └─ modal.scss
-│   │
-│   ├─ styles/                # SCSS 관련 구조화
-│   │   ├─ _variables.scss    # 공통 변수 (색상, 폰트, z-index 등)
-│   │   ├─ _mixins.scss       # 믹스인 (반복되는 패턴)
-│   │   ├─ _functions.scss    # SCSS 함수
-│   │   ├─ _reset.scss        # 리셋 CSS
-│   │   ├─ _typography.scss   # 폰트/텍스트 스타일
-│   │   ├─ _layout.scss       # 그리드, 레이아웃 구조
-│   │   └─ _utilities.scss    # 유틸리티 클래스
-│   │
-│   └─ themes/                # 테마별 SCSS
-│       ├─ _default.scss      # 기본 테마 (라이트)
-│       └─ _dark.scss         # 다크 테마
-
-
-src/
-├── assets/                     # 이미지, 폰트 등 정적 파일
-│   └── icons/
+<!-- src/
+├── assets/                     # 이미지, 폰트, 아이콘 등 정적 파일
+│   └── icons/                  # SVG 아이콘 등
+├── components/                 # 재사용 가능한 UI 컴포넌트
+│   ├── common/                 # 범용 컴포넌트(Button, Modal, Toast 등)
+│   │   ├── Button/
+│   │   ├── Modal/
+│   │   └── toast/
+│   ├── content/                # 페이지 UI 컴포넌트(Form, Suggest 등)
+│   │   ├── Form/
+│   │   ├── Intro/
+│   │   ├── Sugguests/
+│   │   └── Messages/
+│   ├── layout/                 # Header, Aside 등 레이아웃 관련 컴포넌트
+│   └── modals/                 # 글자크기, 파일 업로드, 사용법 안내 등 모달 컴포넌트
 ├── styles/                     # 전역 스타일 및 테마
-│   ├── base/                   # reset, typography 등
-│   ├── theme/                  # 테마 관련 SCSS
-│   │   ├── _variables.scss     # 색상, 폰트, 간격 등 공통 변수
-│   │   ├── _light.scss         # 라이트 테마
-│   │   ├── _dark.scss          # 다크 테마
-│   │   └── _mixins.scss        # 반복 스타일 함수
-│   └── components/             # 컴포넌트별 스타일 (_button.scss 등)
-├── components/
-│   ├── common/                 # 범용 UI 컴포넌트
-│   │   └── Button/
-│   │       ├── Button.jsx
-│   │       └── Button.scss
-│   ├── layout/                 # Header, Footer 등 전체 구조 요소
-│   └── home/                   # 홈 페이지 전용 컴포넌트
-│       └── IntroDesc/
-│           ├── IntroDesc.jsx
-│           └── IntroDesc.scss
-├── hooks/
-│   └── useTheme.js             # 테마 토글용 커스텀 훅
-├── utils/
-│   └── theme.js                # 테마 설정 객체
-├── layouts/
-│   └── MainLayout.jsx         # 전체 페이지 레이아웃
-├── pages/
-│   └── Home.jsx               # 홈 페이지
-└── index.js                   # 앱 진입점
-
--->
+│   ├── default/                # reset, typography 등 기본 스타일
+│   └── theme/                  # 공통 색상, 변수 등
+└── index.js                     # React 앱 진입점 -->

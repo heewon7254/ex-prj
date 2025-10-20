@@ -15,7 +15,6 @@ const FormTextarea = ({ textareaRef, handleInput, textareaValue, handleSubmit })
         id="message"
         className="content__form-textarea"
         name="message"
-        rows="1"
         ref={textareaRef}
         onInput={handleInput}
         value={textareaValue}

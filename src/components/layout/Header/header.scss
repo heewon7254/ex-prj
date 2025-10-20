@@ -1,6 +1,6 @@
 :root {
   --ds-header-util-button-border-color: #edededfa;
-  --ds-header-util-button-bg: #f9fbff;
+  --ds-header-util-button-bg: var(--ds-general-color-white);
   --ds-header-util-button-text-color: var(--ds-color-black-2);
 
   --ds-header-util-button-border-color-hover: #444444;

@@ -7,25 +7,25 @@ import Button from "../../common/Button/Button";
 import "./fontSizeModal.scss";
 
 const FontSizeModal = ({ onCancel, onConfirm }) => {
-  const fontSizeIndex = useUserSettingsStore(state => state.fontSizeIndex);
   const updateFontSize = useUserSettingsStore(state => state.updateFontSize);
-  const [selectedSize, setSelectedSize] = useState(fontSizeIndex);
+  const [selectedSize, setSelectedSize] = useState(2); // 기본값 2
 
   useEffect(() => {
-    const localSize = Number(localStorage.getItem("exGpt-font-size"));
-    if (!isNaN(localSize)) {
-      setSelectedSize(localSize);
-    } else {
-      setSelectedSize(fontSizeIndex);
-    }
-  }, [fontSizeIndex]);
+    // localStorage에서 저장된 값 가져오기
+    const stored = localStorage.getItem("exGpt-font-size");
+    const num = Number(stored);
+
+    // 숫자가 0~4 범위면 그대로, 아니면 기본값 2
+    const initialIndex = !isNaN(num) && num >= 0 && num <= 4 ? num : 2;
+    setSelectedSize(initialIndex);
+  }, []);
 
   const handleConfirm = async () => {
-    await updateFontSize(selectedSize);
-    onConfirm();
+    await updateFontSize(selectedSize); // 값 적용
+    onConfirm?.(); // 확인 콜백
+    onCancel?.(); // 모달 닫기
   };
 
-  // --ds-font-size-base: 1em; // 20px -> 2px 씩 늘리기
   const sizes = ["가", "가", "가", "가", "가"];
 
   return (
@@ -48,8 +48,6 @@ const FontSizeModal = ({ onCancel, onConfirm }) => {
           {label}
         </Button>
       ))}
-      {/* <div className="font-size-options">
-      </div> */}
     </Modal>
   );
 };

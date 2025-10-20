@@ -1,4 +1,4 @@
-export const getUserInfo = async ({usrId}) => {
+export const getUserInfo = async ({ usrId }) => {
   const res = await fetch("/api/user/getUserInfo", {
     method: "GET",
     headers: { "Content-Type": "application/json" },
@@ -10,26 +10,29 @@ export const getUserInfo = async ({usrId}) => {
   return await res.json();
 };
 
-export const saveUserFontSize = async ({usrId, fntSizeCd}) => {
-  await fetch("/api/user/setUserInfo", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      usrId: usrId,
-      fntSizeCd: fntSizeCd 
-    }),
-  });
-  if (!res.ok) throw new Error("Failed to save font settings");
-  return await res.json();
+export const saveUserFontSize = async index => {
+  try {
+    const response = await fetch("/api/saveFontSize", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ fontSize: index }),
+    });
+
+    // 응답 json 확인
+    const data = await response.json();
+    console.log("저장 성공:", data);
+  } catch (error) {
+    console.error("저장 실패:", error);
+  }
 };
 
-export const saveUserTheme = async ({usrId, uiThmCd}) => {
+export const saveUserTheme = async ({ usrId, uiThmCd }) => {
   await fetch("/api/user/setUserInfo", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       usrId: usrId,
-      uiThmCd: uiThmCd
+      uiThmCd: uiThmCd,
     }),
   });
   if (!res.ok) throw new Error("Failed to save theme settings");

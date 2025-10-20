@@ -59,6 +59,7 @@
 
   &__item {
     display: flex;
+    align-items: center;
     gap: 10px;
     transition: 0.1s;
     flex: 1;
@@ -67,7 +68,6 @@
     line-height: 1.4;
     // word-break: keep-all;
     min-height: 109px;
-    padding-top: 2.25em;
     padding-inline: 1.25em;
     border: 1px solid var(--ds-suggest-item-border-color);
     background: var(--ds-suggest-item-bg);

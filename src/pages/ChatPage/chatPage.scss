@@ -1,0 +1,74 @@
+:root {
+  --ds-scroll-to-bottom-bg: var(--ds-general-color-white);
+  --ds-scroll-to-bottom-icon-color: var(--ds-color-black-1);
+  --ds-scroll-to-bottom-border-color: #8c8c8c47;
+}
+[theme="dark"] {
+  --ds-scroll-to-bottom-bg: #1d232a;
+  --ds-scroll-to-bottom-icon-color: var(--ds-general-color-white);
+  --ds-scroll-to-bottom-border-color: #ccdaf547;
+}
+.content {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  width: 100%;
+
+  &.content--layout {
+    display: flex;
+    flex-direction: column;
+    // padding-top: 29px;
+  }
+
+  &__inner {
+    height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2em 2em 0;
+  }
+
+  // 검색 입력창 제외한 스크롤 가능한 부분
+  .top--scrollable {
+    // padding-bottom: 4vh;
+    overflow-y: auto;
+  }
+
+  // 하단 이동 버튼
+  .scroll-to-bottom {
+    width: 34px;
+    height: 34px;
+    position: fixed;
+    left: 57%;
+    bottom: 20%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: var(--ds-scroll-to-bottom-bg);
+    border: 1px solid var(--ds-scroll-to-bottom-border-color);
+    color: var(--ds-scroll-to-bottom-icon-color);
+
+    svg {
+      width: 10px;
+    }
+  }
+}
+// aside 닫혔을 시
+.aside.folded ~ .content--layout {
+  padding-top: 29px;
+}
+@media (max-width: 930px) {
+  .content {
+    &__inner {
+      padding: 2em 1em 0;
+    }
+  }
+}
+@media (max-width: 758px) {
+  .content {
+    padding-left: 56px;
+
+    &__inner {
+      padding: 2em 0.85em 0;
+    }
+  }
+}

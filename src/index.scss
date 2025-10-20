@@ -1,44 +1,5 @@
-/* 전체 import용 SCSS (메인 엔트리) */
-
-/* // Reset & Base
-@import "./styles/reset";
-@import "./styles/variables";
-@import "./styles/mixins";
-@import "./styles/functions";
-@import "./styles/typography";
-@import "./styles/layout";
-@import "./styles/utilities";
-
-// Components
-@import "./components/button";
-@import "./components/table";
-@import "./components/modal";
-
-// Themes (기본값: default)
-@import "./themes/default"; */
-
-/* SCSS 로 파일 변경 */
-// theme
-// @import "./styles/themes/_loader.scss";
-
-// default
-// @import "./styles/default/_default.scss";
-
-// common
-@use "./styles/common";
 // theme
 @use "./styles/themes/loader";
 // default
 @use "./styles/default/default";
 @use "./styles/default/font";
-
-// components --> 헤당 컴포넌트 import 로 변경 후 삭제
-@use "./components/header/header.scss";
-@use "./components/aside/aside.scss";
-// @use "./components/contentLayout";
-@use "./components/contentIntro";
-@use "./components/suggests";
-@use "./components/form";
-@use "./components/messages";
-@use "./components/modal";
-@use "./components/toast/toast";

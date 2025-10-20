@@ -2,8 +2,8 @@
 
 @mixin ds-dark-theme-colors {
   // bg
-  --ds-main-surface-primary: var(--ds-general-color-black);
+  --ds-main-surface-primary: var(--ds-color-black-2);
   // text
-  --ds-main-text-primary: var(--ds-color-black);
+  --ds-main-text-primary: var(--ds-general-color-white);
   // button
 }

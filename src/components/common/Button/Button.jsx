@@ -1,7 +1,7 @@
 import React from "react";
 import "./button.scss";
 
-const Button = (props) => {
+const Button = props => {
   let {
     onClick,
     disabled,
@@ -18,6 +18,7 @@ const Button = (props) => {
     primary,
     secondary,
     type = "button",
+    ariaLabel
   } = props;
 
   className = className || defaultClass;
@@ -59,13 +60,12 @@ const Button = (props) => {
       style={style}
       disabled={disabled}
       onClick={onClick}
+      aria-label={ariaLabel || label || titleLabel}
     >
       <p className={`button-inner`}>
         {/* SvgIcon 왼쪽일 때 */}
         {SvgIcon && iconPosition === "left" && renderSvgIcon()}
-        {children
-          ? children
-          : label && <span className="button-label">{label}</span>}
+        {children ? children : label && <span className="button-label">{label}</span>}
         {/* SvgIcon 오른쪽일 때 */}
         {SvgIcon && iconPosition === "right" && renderSvgIcon()}
       </p>

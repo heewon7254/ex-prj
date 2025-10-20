@@ -2,11 +2,12 @@
   // primary
   --ds-button-primary-bg: #067ee1;
   --ds-button-primary-border-color: #0074d4;
-  --ds-button-primary-text: var(--ds-general-color-white);
 
+  // primary hover
   --ds-button-primary-bg-hover: #006fcb;
   --ds-button-primary-border-color-hover: #0063b5;
 
+  // primary active
   --ds-button-primary-bg-active: #006fcb;
   --ds-button-primary-border-color-active: #0063b5;
 
@@ -15,11 +16,27 @@
   --ds-button-secondary-border-color: #cccccc;
   --ds-button-secondary-text: #9b9ca1;
 
+  // secondary hover
   --ds-button-secondary-bg-hover: #e6e6e6;
   --ds-button-secondary-border-color-hover: #cccccc;
 
+  // secondary active
   --ds-button-secondary-bg-active: #e6e6e6;
   --ds-button-secondary-border-color-active: #cccccc;
+}
+[theme="dark"] {
+  // secondary
+  --ds-button-secondary-bg: #454959;
+  --ds-button-secondary-border-color: #454959;
+  --ds-button-secondary-text: var(--ds-general-color-white);
+
+  // secondary hover
+  --ds-button-secondary-bg-hover: #5c6072;
+  --ds-button-secondary-border-color-hover: #5c6072;
+
+  // secondary active
+  --ds-button-secondary-bg-active: #5c6072;
+  --ds-button-secondary-border-color-active: #5c6072;
 }
 .ds-button {
   display: inline-flex;
@@ -54,6 +71,11 @@
 
   // 텍스트
   &:not(:has(svg)):has(span) {
+    justify-content: center;
+  }
+
+  // 아이콘
+  &:has(svg):not(:has(span)) {
     justify-content: center;
   }
 }
@@ -121,7 +143,7 @@
   &.primary {
     background-color: var(--ds-button-primary-bg);
     border: 1px solid var(--ds-button-primary-border-color);
-    color: var(--ds-button-primary-text);
+    color: var(--ds-general-color-white);
 
     &:not([disabled]):hover {
       background-color: var(--ds-button-primary-bg-hover);

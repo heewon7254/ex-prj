@@ -1,0 +1,11 @@
+export const SubmitIcon = () => (
+  <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M10.0016 19.2V4M10.0016 4L3.35156 10.65M10.0016 4L16.6516 10.65"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

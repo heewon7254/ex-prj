@@ -1,24 +1,23 @@
 @forward "../themes/variables";
-
 :root {
-  --ds-body-bg: #f8faff;
+  --ds-body-bg: #fbfbfb;
 
   --ds-font-size-base: 1em;
   --line-height-base: 1;
-  // 간격
-  --ds-spacing-base: 16px;
   // 스크롤
   --ds-webkit-scrollbar-thumb-bg: #e0e0e0;
+  // 선택영역
+  --ds-selection-bg: #b8ddff;
 }
 [theme="dark"] {
   --ds-body-bg: #1d232a;
 
   --ds-font-size-base: 1em;
   --line-height-base: 1;
-  // 간격
-  --ds-spacing-base: 16px;
   // 스크롤
   --ds-webkit-scrollbar-thumb-bg: #4d4d4d;
+  // 선택영역
+  --ds-selection-bg: #3d5c7a;
 }
 
 /* 기준 폰트 */
@@ -49,6 +48,7 @@
 
 html {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -63,7 +63,8 @@ body {
   font-family: var(--ds-font-family-1);
   // font-size: 1em;
   font-size: var(--ds-font-size-base);
-  min-width: 500px;
+  min-width: 430px;
+  width: 100%;
 }
 
 // scrollbar 속성 CSS 변수 지원이 불완전, fallback 없으면 안 보임
@@ -81,6 +82,9 @@ body {
   &::-webkit-scrollbar-thumb {
     border-radius: var(--ds-webkit-scrollbar-thumb-radius, 8px);
     background-color: var(--ds-webkit-scrollbar-thumb-bg, #e0e0e0);
+  }
+  *::selection {
+    background: var(--ds-selection-bg, #b3d4fc);
   }
 }
 
@@ -137,4 +141,20 @@ body {
       justify-content: flex-end;
     }
   }
+}
+
+.app-container {
+  display: flex;
+  height: calc(100% - 58px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

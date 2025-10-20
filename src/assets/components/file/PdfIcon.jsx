@@ -1,0 +1,21 @@
+export const PdfIcon = () => {
+  return (
+    <svg width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="27" rx="6.23265" fill="#EDEDED" />
+      <path
+        d="M6.99414 2.61133H12.5908C13.8714 2.61133 15.1101 3.06801 16.085 3.89844L19.4941 6.80176C20.696 7.82553 21.3887 9.32554 21.3887 10.9043V20.0059C21.3887 22.4262 19.4262 24.3887 17.0059 24.3887H6.99414C4.57376 24.3887 2.61133 22.4262 2.61133 20.0059V6.99414C2.61133 4.57375 4.57376 2.61133 6.99414 2.61133Z"
+        fill="#FA3737"
+        stroke="#EB1010"
+        strokeWidth="1.22323"
+      />
+      <path d="M8 11H10.5" stroke="white" strokeWidth="83602" stroke-linecap="round" />
+      <path d="M8 15H16" stroke="white" strokeWidth="1.83602" stroke-linecap="round" />
+      <path
+        d="M8 19C11.1242 19 12.8758 19 16 19"
+        stroke="white"
+        strokeWidth="1.83602"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};
